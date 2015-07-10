@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="EVJ-pR-eUQ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Music-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="CYMusicController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZTr-yw-zon"/>
+                        <viewControllerLayoutGuide type="bottom" id="KxI-ja-Vy3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="IeR-iX-mdq">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="saC-ut-Ki2">
+                                <rect key="frame" x="0.0" y="493" width="320" height="75"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="mPf-NB-isq"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="WrF-QX-8vH">
+                                <rect key="frame" x="0.0" y="64" width="320" height="429"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="musicCell" textLabel="Q2U-bW-mRp" detailTextLabel="Lbp-5D-Yn3" style="IBUITableViewCellStyleSubtitle" id="gB4-Xy-l3G" customClass="CYMusicCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gB4-Xy-l3G" id="gkh-7H-IcQ" colorLabel="IBBuiltInLabel-Blue">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Q2U-bW-mRp">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lbp-5D-Yn3">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="9nK-fu-sfR"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="2ml-iQ-p89"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WrF-QX-8vH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="5NR-O0-dvo"/>
+                            <constraint firstItem="IeR-iX-mdq" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="9SM-oX-R4x"/>
+                            <constraint firstItem="WrF-QX-8vH" firstAttribute="top" secondItem="ZTr-yw-zon" secondAttribute="bottom" id="DUf-iD-91P"/>
+                            <constraint firstItem="IeR-iX-mdq" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="IdI-gj-kDi"/>
+                            <constraint firstItem="saC-ut-Ki2" firstAttribute="top" secondItem="WrF-QX-8vH" secondAttribute="bottom" id="OEr-Se-k5W"/>
+                            <constraint firstItem="KxI-ja-Vy3" firstAttribute="top" secondItem="IeR-iX-mdq" secondAttribute="bottom" id="VFY-T6-nyb"/>
+                            <constraint firstItem="KxI-ja-Vy3" firstAttribute="top" secondItem="saC-ut-Ki2" secondAttribute="bottom" id="ldu-Pj-G8o"/>
+                            <constraint firstAttribute="trailing" secondItem="IeR-iX-mdq" secondAttribute="trailing" id="mdi-9A-ZWF"/>
+                            <constraint firstItem="saC-ut-Ki2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="o6E-Vf-Uw2"/>
+                            <constraint firstAttribute="trailing" secondItem="saC-ut-Ki2" secondAttribute="trailing" id="tAo-Cx-W7c"/>
+                            <constraint firstAttribute="trailing" secondItem="WrF-QX-8vH" secondAttribute="trailing" id="wIL-Ro-0UW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Music" id="9jq-aN-2An"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="bottomView" destination="saC-ut-Ki2" id="x8o-ja-2LQ"/>
+                        <outlet property="tableView" destination="WrF-QX-8vH" id="y9H-gL-kIQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="249" y="397"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hwd-Zy-n3S">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EVJ-pR-eUQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mZD-io-8hq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="caM-M2-UUv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zMq-aa-USH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-187" y="397"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="275" height="487"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
